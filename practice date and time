@@ -1,0 +1,61 @@
+
+
+select current_time;
+
+select current_timestamp;
+select convert_timezone('UTC', current_timestamp) as UTC_Timezone;
+ 
+ Select DATE_TRUNC('YEAR', CURRENT_DATE) AS YR_FROM_DATE;  
+SELECT DATE_TRUNC('MONTH',CURRENT_dATE) AS MTH_FROM_DATE;
+
+SELECT to_date('2013-05-17')AS YR_FROM_DATE;
+
+select date_trunc('YEAR',to_date('2022-11-27')) as YR_from_date;
+
+select to_date('2013-05-17');
+
+
+select current_timestamp();
+select day(current_timestamp() ),
+hour(current_timestamp() ),
+second(current_timestamp() ),
+minute(current_timestamp() ),
+month(current_timestamp());
+
+select week(current_date) as week_from_start_of_the_year;
+select day(current_date) as week_from_start_of_the_year;
+select month(current_date) as week_from_start_of_the_year;
+select last_day(to_date('2022-12-18')) as last_day_given_month;
+
+-----get last day prev month
+
+select LAST_DAY(date('2022-12-17') - INTERVAL '1 MONTH') as Last_day_prev_month;
+
+select DAY(date('2022-12-17') - INTERVAL '0.5 MONTH') as Last_day_prev_month;
+
+select date(date('2022-12-18') - INTERVAL '5 day') as Five_days_back_data;
+
+select quarter(current_date) as qtr;
+select quarter(date('2021-12-18')) as QTR_given_date;  
+
+select extract(month from current_date) as month;
+select extract(day from current_date) as day;
+select extract (year from current_date) as year;
+
+select to_date('1993-08-17') as date;
+
+SELECT TO_CHAR(TO_DATE('2022-12-17'), 'DD-MM-YY') as DATE_DD_MM_YY;
+
+select to_char(to_date('2022-12-11'),'MM-YY') as MM-YY;
+
+select to_char(to_date('2022-12-11'),'DY') as Date_day;
+
+select to_char(to_date('2022-12-11'),'DD-MM-YY-DAY') as Date_Month_year_day;
+
+select dayname(current_date);
+select dayname('2022-12-9');
+
+select datediff('month', '2022-12-13','2021-12-13');
+select datediff('year','2022-12-13','2008-12-13');
+
+select datediff('day','1972-12-19','2022-12-18');
